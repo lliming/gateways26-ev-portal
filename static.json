@@ -18,15 +18,19 @@
       },
       "components": {
         "Result": {
-          "heading": "entries[0].content.name",
+          "heading": "entries[0].content.vin_prefix",
           "fields": [
             {
-              "label": "Tags",
-              "property": "entries[0].content.tags"
+              "label": "County",
+              "property": "entries[0].content.county"
             },
             {
-              "label": "Region",
-              "property": "entries[0].content.region"
+              "label": "Make",
+              "property": "entries[0].content.make"
+            },
+            {
+              "label": "Model",
+              "property": "entries[0].content.model"
             }
           ]
         }
