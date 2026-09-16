@@ -25,12 +25,28 @@
               "property": "entries[0].content.county"
             },
             {
+              "label": "Model Year",
+              "property": "entries[0].content.model_year"
+            },
+            {
               "label": "Make",
               "property": "entries[0].content.make"
             },
             {
               "label": "Model",
               "property": "entries[0].content.model"
+            },
+            {
+              "label": "EV Type",
+              "property": "entries[0].content.ev_type"
+            },
+             {
+              "label": "Range (miles)",
+              "property": "entries[0].content.electric_range_mi"
+            },
+            {
+              "label": "CAFV Eligibility",
+              "property": "entries[0].content.cafv_eligibility"
             }
           ]
         }
@@ -56,7 +72,13 @@
               "field_name": "model",
               "type": "terms",
               "size": 10
-            }
+            },
+            {
+              "name": "EV Type",
+              "field_name": "ev_type",
+              "type": "terms",
+              "size": 10
+            }            
           ]
         }
       }
