@@ -11,7 +11,7 @@
         "title": "Search | Globus Search Portal"
       },
       "content": {
-        "headline": "Globus Search Portal"
+        "headline": "Gateways 2026 State of Washington EVs"
       },
       "features": {
         "transfer": false
@@ -33,17 +33,23 @@
       },
       "globus": {
         "search": {
-          "index": "78b92aca-e361-4307-8f66-bc448f20e2c3",
+          "index": "1443a95d-60b7-493a-b504-45e047094d28",
           "facets": [
             {
-              "name": "Tags",
-              "field_name": "tags",
+              "name": "County",
+              "field_name": "county",
               "type": "terms",
               "size": 10
             },
             {
-              "name": "Region",
-              "field_name": "region",
+              "name": "Make",
+              "field_name": "make",
+              "type": "terms",
+              "size": 10
+            },
+            {
+              "name": "Model",
+              "field_name": "model",
               "type": "terms",
               "size": 10
             }
