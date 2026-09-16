@@ -8,33 +8,67 @@
     "version": "1.0.0",
     "attributes": {
       "metadata": {
-        "title": "Search | Globus Search Portal"
+        "title": "Science Gateways 2026: Globus Search Portal",
+        "description": "From the data.gov EV Population Dataset"
+      },
+      "theme": {
+        "colors": {
+          "brand": {
+            "50": "#FCE9E9",
+            "100": "#F6C0C0",
+            "200": "#F19898",
+            "300": "#EB7070",
+            "400": "#E54848",
+            "500": "#E01F1F",
+            "600": "#B31919",
+            "700": "#861313",
+            "800": "#590D0D",
+            "900": "#2D0606"
+          }
+        }
       },
       "content": {
-        "headline": "Gateways 2026 State of Washington EVs"
+        "headline": "Gateways 2026 State of Washington EVs",
+        "logo": {
+          "src": "images/Globus_logo_WHITE_square.png",
+          "alt": "Globus.org"
+       },
+       "navigation": {
+          "items": [
+            {
+              "label": "Source Data",
+              "href": "https://catalog.data.gov/dataset/electric-vehicle-population-data",
+              "authenticated": false
+            },
+            {
+              "label": "Gateways 2026",
+              "href": "https://sciencegateways.org/gateways2026-program",
+              "authenticated": false
+            }
+          ]
+        }
       },
       "features": {
+        "requireAuthentication": false,
+        "jsonata": true,
         "transfer": false
       },
       "components": {
         "Result": {
-          "heading": "entries[0].content.vin_prefix",
+          "heading": "'Vehicle ID: ' & entries[0].content.dol_vehicle_id",
+          "summary": "entries[0].content.model_year & ' ' & entries[0].content.make & ' ' & entries[0].content.model & ' (' & entries[0].content.city & ',' & entries[0].content.county & ' County)'",
           "fields": [
             {
-              "label": "County",
-              "property": "entries[0].content.county"
+              "label": "ID",
+              "property": "entries[0].content.dol_vehicle_id"
             },
             {
-              "label": "Model Year",
-              "property": "entries[0].content.model_year"
+              "label": "Location",
+              "property": "entries[0].content.city & ', ' & entries[0].content.county"
             },
             {
-              "label": "Make",
-              "property": "entries[0].content.make"
-            },
-            {
-              "label": "Model",
-              "property": "entries[0].content.model"
+              "label": "Make/Model",
+              "property": "entries[0].content.model_year & ' ' & entries[0].content.make & ' ' & entries[0].content.model"
             },
             {
               "label": "EV Type",
@@ -56,10 +90,16 @@
           "index": "1443a95d-60b7-493a-b504-45e047094d28",
           "facets": [
             {
+              "name": "City",
+              "field_name": "city",
+              "type": "terms",
+              "size": 25
+            },
+            {
               "name": "County",
               "field_name": "county",
               "type": "terms",
-              "size": 10
+              "size": 20
             },
             {
               "name": "Make",
